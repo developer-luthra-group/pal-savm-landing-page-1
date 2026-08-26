@@ -2,84 +2,141 @@
 <html lang="en">
 
 <head>
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WP2MV7TR');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1" />
+
   <title>
     DG Rental Solutions | PAL Svam Power Solutions Private Limited — Cummins Authorised Dealer
   </title>
+
   <meta name="description"
     content="Reliable DG rental solutions for construction sites, events, hospitals, hotels & commercial spaces. 125 kVA to 2500 kVA. Delhi NCR, Barabanki, Bareilly, Rudrapur, Aligarh." />
+
   <meta name="theme-color" content="#0A3634" />
 
   <!-- Open Graph / Facebook Ads preview tags -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="DG Rental Solutions | PAL Svam Power Solutions Private Limited — Cummins Authorised Dealer" />
+  <meta property="og:title"
+    content="DG Rental Solutions | PAL Svam Power Solutions Private Limited — Cummins Authorised Dealer" />
   <meta property="og:description"
     content="Reliable DG rental for construction sites, events, hospitals, hotels & commercial spaces. 125–2500 kVA. Punjab, Haryana, Jammu and Kashmir, Ladakh, Himachal Pradesh." />
   <meta property="og:image" content="assets/genset-hero.jpg" />
+
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
     rel="stylesheet" />
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WP2MV7TR" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <header>
     <div class="wrap">
+
       <div class="brand">
-        <img src="./images/pal-logo.png" alt="PAL Svam Power Solutions Private Limited logo" />
+        <img src="./images/pal-logo.webp" alt="PAL Svam Power Solutions Private Limited logo" />
+
         <div class="name">
           PAL Svam Power Solutions Private Limited
           <span>Authorised Dealer - Cummins India Limited.</span>
         </div>
       </div>
+
       <div class="header-cta">
-        <img class="cummins-logo" src="./images/cummins-logo.png" alt="" />
+        <img class="cummins-logo" src="./images/cummins-logo.webp" alt="Cummins Logo" />
         <a href="#lead-form" class="btn btn-amber">Enquire Now</a>
       </div>
+
     </div>
   </header>
 
-  <div class="hazard"></div>
+  <div class="hazard" id="lead-form"></div>
 
   <!-- HERO -->
-
   <section class="hero" style="position: relative; isolation: isolate">
+
     <div style="position: absolute; inset: 0; z-index: -2; overflow: hidden">
+
       <picture>
-        <source media="(max-width: 768px)" srcset="./images/mobile-image.png" />
-        <img class="hero-bg" src="./images/desktop-image.png" alt="Cummins DG Set Banner" loading="eager"
+        <source media="(max-width: 768px)" srcset="./images/mobile-image.webp" />
+
+        <img class="hero-bg" src="./images/desktop-image.webp" alt="Cummins DG Set Banner" loading="eager"
           fetchpriority="high" />
       </picture>
+
     </div>
 
     <div class="wrap hero-grid">
+
       <div>
       </div>
 
-      <div class="lead-card">
+      <div class="lead-card" id="lead-form2">
+
         <h3>Get a Rental Quote</h3>
+
         <p class="tag">
           Submit your enquiry today. We'll get back to you within 24 working
           hours.
         </p>
+
         <form id="dgLeadForm">
+
           <div class="field">
             <label for="fname">Full Name</label>
+
             <input id="fname" name="name" type="text" placeholder="Your name" required />
           </div>
+
           <div class="field">
             <label for="fphone">Phone Number</label>
+
             <input id="fphone" name="phone" type="tel" placeholder="10-digit mobile number" pattern="[0-9]{10}"
               required />
           </div>
+
+          <div class="field">
+            <label for="femail">Email Address</label>
+
+            <input id="femail" name="email" type="email" placeholder="Your email address" required />
+          </div>
+
           <div class="field">
             <label for="fkva">Power Requirement (kVA)</label>
+
             <select id="fkva" name="kva" required>
               <option value="" disabled selected>Select kVA range</option>
               <option>125 – 320 kVA</option>
@@ -88,12 +145,17 @@
               <option>Not sure — need advice</option>
             </select>
           </div>
+
           <div class="field">
             <label for="cname">Company Name</label>
-            <input id="cname" name="phone" type="tel" placeholder="Enter Company Name" required />
+
+            <input id="cname" name="company" type="text" placeholder="Enter Company Name" required />
           </div>
+
           <div class="field">
+
             <label for="fcity">City</label>
+
             <select id="fcity" name="city" required>
               <option value="" disabled selected>Select your city</option>
               <option>Punjab</option>
@@ -101,42 +163,60 @@
               <option>Jammu and Kashmir</option>
               <option>Ladakh</option>
               <option>Himachal Pradesh</option>
-              <option>Other</option>
+              <option value="Other">Other</option>
             </select>
+
+            <input type="text" id="otherCity" placeholder="Enter your city" style="display:none;margin-top:10px;" />
+
           </div>
+
           <label class="consent">
             <input type="checkbox" required />
-            <span>I agree to be contacted by phone/SMS/WhatsApp regarding my DG
-              rental enquiry.</span>
+
+            <span>
+              I agree to be contacted by phone/SMS/WhatsApp regarding my DG rental enquiry.
+            </span>
           </label>
+
           <button type="submit" class="btn btn-amber btn-block">
             Book Now
           </button>
+
           <p class="fineprint">
-            Your information is used only to respond to this enquiry. See our
-            <a href="#" style="color: var(--teal-brand); text-decoration: underline">Privacy Policy</a>.
+            Your information is used only to respond to this enquiry.
+            See our
+            <a href="#" style="color: var(--teal-brand); text-decoration: underline">
+              Privacy Policy
+            </a>.
           </p>
+
+          <!-- INFORMATION MESSAGE -->
+          <p id="formMessage" style="margin-top: 8px; font-weight: 600; display: none;text-align: center;">
+          </p>
+
         </form>
-        <div class="form-success" id="formSuccess">
-          <div class="tick">✓</div>
-          <h4 style="font-size: 20px">Thank you!</h4>
-          <p style="color: var(--ink-soft); margin-top: 8px; font-size: 14.5px">
-            Our rental desk will call you shortly to confirm availability and
-            pricing.
-          </p>
-        </div>
+
       </div>
+
     </div>
+
   </section>
 
   <div class="hazard thin"></div>
 
   <!-- AUTHORITY -->
   <section class="authority">
+
     <div class="wrap">
+
       <div class="section-head">
+
         <div class="eyebrow">Why Businesses Trust Us</div>
-        <h2>An Authorised Cummins Dealer Behind Every Generator We Rent</h2>
+
+        <h2>
+          An Authorised Cummins Dealer Behind Every Generator We Rent
+        </h2>
+
         <p>
           We don't just provide rental power — we deliver complete peace of
           mind. Every rental DG set is backed by genuine Cummins parts,
@@ -144,11 +224,16 @@
           expertise, ensuring maximum uptime, reliability, and responsive
           service throughout your project.
         </p>
+
       </div>
+
       <div class="auth-grid">
+
         <div class="auth-card">
           <div class="ic">C</div>
+
           <h4>Authorised Cummins Dealer</h4>
+
           <p>
             Delivering reliable power through genuine Cummins diesel generator
             sales, rental, maintenance, and lifecycle support as an authorised
@@ -156,27 +241,36 @@
             (DBU).
           </p>
         </div>
+
         <div class="auth-card">
           <div class="ic">✓</div>
+
           <h4>Genuine Cummins Parts & Consumables</h4>
+
           <p>
             Every rental DG set is maintained using genuine Cummins spare
             parts, filters, lubricants, and coolants, ensuring optimum
             performance, maximum uptime, and long engine life.
           </p>
         </div>
+
         <div class="auth-card">
           <div class="ic">⚙</div>
+
           <h4>Factory-Trained Service Support</h4>
+
           <p>
             Our certified Cummins-trained engineers provide professional
             installation, preventive maintenance, remote monitoring, and 24×7
             breakdown support to ensure maximum equipment uptime.
           </p>
         </div>
+
         <div class="auth-card">
           <div class="ic">🏢</div>
+
           <h4>Trusted Across Diverse Industries</h4>
+
           <p>
             Our rental solutions support commercial, industrial,
             infrastructure, healthcare, hospitality, real estate,
@@ -184,40 +278,53 @@
             Cummins power.
           </p>
         </div>
+
       </div>
+
       <div class="auth-locs">
         <span style="color: #fff; font-weight: 700">Active in:</span>
         <span class="pin">Punjab</span>
         <span class="pin">Haryana</span>
-             <span class="pin">Ladakh</span>
+        <span class="pin">Ladakh</span>
         <span class="pin">Jammu and Kashmir</span>
-   
         <span class="pin">Himachal Pradesh</span>
       </div>
+
     </div>
+
   </section>
 
   <!-- PROBLEM / SOLUTION -->
   <section>
+
     <div class="wrap">
+
       <div class="section-head">
+
         <div class="eyebrow">Downtime Costs More Than You Think</div>
+
         <h2>Don't let a power outage stop your business.</h2>
+
         <p>
           Whether you're running a hospital, factory, commercial building,
           construction project, residential society, or a large-scale event,
           our Cummins Rental Power Solutions keep your operations running with
           dependable performance, rapid support, and complete peace of mind.
         </p>
+
         <p>Reliable Power. Zero Compromise. Maximum Uptime.</p>
+
       </div>
+
       <div class="compare-table">
+
         <div class="head problem">⚠ Without Backup Power</div>
         <div class="head solution">✓ With PAL Svam DG Rental</div>
 
         <div class="cell problem">
           Project deadlines slip due to grid outages at construction sites
         </div>
+
         <div class="cell solution">
           Ready-to-Deploy Cummins DG Sets with professional delivery,
           installation, and commissioning by factory-trained engineers.
@@ -226,6 +333,7 @@
         <div class="cell problem">
           Critical equipment shuts down in hospitals & cold storage
         </div>
+
         <div class="cell solution">
           Reliable backup power for critical, commercial, industrial,
           infrastructure, and residential applications.
@@ -234,6 +342,7 @@
         <div class="cell problem">
           Events and functions get disrupted mid-way
         </div>
+
         <div class="cell solution">
           Flexible rental plans tailored to your project duration—from a
           minimum of 2 months to multi-year contracts.
@@ -242,6 +351,7 @@
         <div class="cell problem">
           Buying a DG set outright ties up capital you may need elsewhere
         </div>
+
         <div class="cell solution">
           Zero capital investment—pay only for the power solution you need,
           for as long as you need it. Comprehensive rental package including
@@ -252,112 +362,178 @@
         <div class="cell problem">
           Untrained operators risk unsafe or inefficient running of gensets
         </div>
+
         <div class="cell solution">
           Fast mobilization and seamless project execution across single or
           multiple locations. Backed by an Authorized Cummins Dealer with over
           25 years of trusted industry experience. Nationwide technical
           support ensuring maximum uptime and business continuity
         </div>
+
       </div>
+
     </div>
+
   </section>
 
   <!-- HOW IT WORKS -->
   <section>
+
     <div class="wrap">
+
       <div class="section-head">
+
         <div class="eyebrow">How It Works</div>
-        <h2>From Enquiry to Uninterrupted Power in Just 4 Simple Steps.</h2>
+
+        <h2>
+          From Enquiry to Uninterrupted Power in Just 4 Simple Steps.
+        </h2>
+
         <p>
           A simple, no-surprises process — whether you're renting for 2 months
           or 2 years.
         </p>
+
       </div>
+
       <div class="hl-grid hl-grid-4">
+
         <div class="hl-card">
+
           <div class="ic">📞</div>
-          <h4 style="font-size: 17px">1. Share Your Requirement</h4>
+
+          <h4 style="font-size: 17px">
+            1. Share Your Requirement
+          </h4>
+
           <p>
             Contact us by phone or submit an enquiry with your project
             location, required DG capacity (kVA), load details, and rental
             duration.
           </p>
+
         </div>
+
         <div class="hl-card">
+
           <div class="ic">📋</div>
-          <h4 style="font-size: 17px">2. Free Technical Site Survey</h4>
+
+          <h4 style="font-size: 17px">
+            2. Free Technical Site Survey
+          </h4>
+
           <p>
             Our experienced engineers visit your site to assess the load,
             application, and installation requirements, ensuring the right
             Cummins DG solution is recommended for maximum performance and
             reliability.
           </p>
+
         </div>
+
         <div class="hl-card">
+
           <div class="ic">🚚</div>
-          <h4 style="font-size: 17px">3. Fast Deployment</h4>
+
+          <h4 style="font-size: 17px">
+            3. Fast Deployment
+          </h4>
+
           <p>
             Our experienced team delivers, installs, tests, and commissions
             your generator with minimal downtime, ensuring your operations
             remain uninterrupted.
           </p>
+
         </div>
+
         <div class="hl-card">
+
           <div class="ic">🔧</div>
+
           <h4 style="font-size: 17px">
             4. Reliable Support Throughout Your Rental
           </h4>
+
           <p>
             Our factory-trained service engineers provide scheduled preventive
             maintenance, 24×7 emergency breakdown support, and genuine Cummins
             service, ensuring maximum uptime and uninterrupted operations from
             start to finish.
           </p>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
   <!-- KVA RANGE -->
   <section style="background: var(--paper-2)">
+
     <div class="wrap">
+
       <div class="section-head">
+
         <div class="eyebrow">Power Requirement</div>
+
         <h2>
           Find the Right Power. Every Time. Cummins Rental DG Sets from 125 to
           2500 kVA
         </h2>
+
         <p>
           From small commercial applications to mission-critical industrial
           operations, our experts help you select the ideal generator capacity
           for reliable, fuel-efficient, and uninterrupted performance.
         </p>
+
       </div>
+
       <div class="kva-grid">
+
         <div class="plate">
+
           <div class="plate-head" style="text-align: center">
-            <span style="text-align: center">Light &amp; Mid Duty</span>
+            <span style="text-align: center">
+              Light & Mid Duty
+            </span>
           </div>
+
           <div class="plate-body">
+
             <div class="inside-pb">
+
               <div class="range">125–320</div>
               <div class="unit">kVA</div>
+
             </div>
+
             <div class="use">
               Ideal for retail outlets, commercial buildings, hotels,
               residential societies, construction site offices, educational
               institutions, and small manufacturing units.
             </div>
+
           </div>
+
         </div>
+
         <div class="plate">
+
           <div class="plate-head">
             <span>Industrial Duty</span>
           </div>
+
           <div class="plate-body">
+
             <div class="inside-pb">
+
               <div class="range">365–1010</div>
               <div class="unit">kVA</div>
+
             </div>
 
             <div class="use">
@@ -365,16 +541,24 @@
               plants, commercial complexes, IT parks, warehouses,
               infrastructure projects, and medium-scale industrial operations.
             </div>
+
           </div>
+
         </div>
+
         <div class="plate">
+
           <div class="plate-head">
             <span>Designed for Critical & Heavy-Duty Applications</span>
           </div>
+
           <div class="plate-body">
+
             <div class="inside-pb">
+
               <div class="range">1250–2500</div>
               <div class="unit">kVA</div>
+
             </div>
 
             <div class="use">
@@ -383,122 +567,179 @@
               campuses, and mission-critical operations requiring dependable
               continuous power.
             </div>
+
           </div>
+
         </div>
+
       </div>
+
       <div class="kva-note">
         🕑
-        <span><b>Minimum Rental Period: 2 Months</b> — Need power for a shorter
+        <span>
+          <b>Minimum Rental Period: 2 Months</b> — Need power for a shorter
           or longer duration? Share your project timeline, and we'll tailor a
-          rental solution that best fits your operational requirements.</span>
+          rental solution that best fits your operational requirements.
+        </span>
       </div>
+
     </div>
+
   </section>
 
   <!-- INDUSTRIES -->
   <section>
+
     <div class="wrap">
+
       <div class="section-head">
+
         <div class="eyebrow">Where We Deliver</div>
+
         <h2>Industries We Serve</h2>
+
         <p>One Rental Fleet. Countless Critical Applications.</p>
+
       </div>
+
       <div class="ind-grid">
+
         <div class="ind-card">
           <div class="ic">🏥</div>
-          <span>Hospitals &amp; Clinics</span>
+          <span>Hospitals & Clinics</span>
         </div>
+
         <div class="ind-card">
           <div class="ic">🏨</div>
-          <span>Hotels &amp; Restaurants</span>
+          <span>Hotels & Restaurants</span>
         </div>
+
         <div class="ind-card">
           <div class="ic">🏭</div>
           <span>Factories</span>
         </div>
+
         <div class="ind-card">
           <div class="ic">🏢</div>
           <span>Commercial Buildings</span>
         </div>
+
         <div class="ind-card">
           <div class="ic">🏗</div>
           <span>Construction Sites</span>
         </div>
+
         <div class="ind-card">
           <div class="ic">❄️</div>
           <span>Cold Storage</span>
         </div>
+
         <div class="ind-card">
           <div class="ic">🏫</div>
-          <span>Schools &amp; Institutions</span>
+          <span>Schools & Institutions</span>
         </div>
+
         <div class="ind-card">
           <div class="ic">🛍</div>
-          <span>Retail &amp; Showrooms</span>
+          <span>Retail & Showrooms</span>
         </div>
+
         <div class="ind-card">
           <div class="ic">🏘</div>
           <span>Residential Societies</span>
         </div>
+
         <div class="ind-card">
           <div class="ic">🏛</div>
-          <span>Government &amp; Infra Projects</span>
+          <span>Government & Infra Projects</span>
         </div>
+
       </div>
+
     </div>
+
   </section>
 
   <!-- HIGHLIGHTS -->
   <section style="background: var(--paper-2)">
+
     <div class="wrap">
+
       <div class="section-head">
+
         <div class="eyebrow">What You Get</div>
+
         <h2>Built for uptime, not just power</h2>
+
       </div>
+
       <div class="hl-grid">
+
         <div class="hl-card">
+
           <div class="ic">🔋</div>
+
           <h4>Reliable Backup Power</h4>
+
           <p>
             Our fleet of Genuine Cummins DG Sets undergoes rigorous
             inspection, preventive maintenance, and load testing before
             dispatch, ensuring dependable performance for mission-critical
             applications.
           </p>
+
         </div>
+
         <div class="hl-card">
+
           <div class="ic">🛠</div>
+
           <h4>Strong Service Support</h4>
+
           <p>
             Backed by factory-trained engineers, scheduled preventive
             maintenance, and 24×7 emergency breakdown assistance, ensuring
             your rented Cummins DG set delivers uninterrupted performance
             throughout the rental period.
           </p>
+
         </div>
+
         <div class="hl-card">
+
           <div class="ic">⛽</div>
+
           <h4>Fuel-Efficient Performance</h4>
+
           <p>
             Efficient & Cleaner Performance Powered by CPCB-compliant Cummins
             DG sets, delivering reliable performance, improved fuel
             efficiency, and lower emissions to support environmentally
             responsible operations.
           </p>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
   <!-- LOCATIONS -->
   <section class="locations" style="position: relative">
+
     <div class="wrap">
+
       <div class="section-head">
+
         <div class="eyebrow">Coverage</div>
+
         <h2>
           Fast Deployment. Factory-Trained Support. Reliable Power Across
           North India.
         </h2>
+
         <p>
           With strategically located depots and dedicated factory-trained
           service teams across North India, we ensure rapid DG set deployment,
@@ -506,255 +747,424 @@
           operations powered with minimal downtime, wherever your project is
           located.
         </p>
+
       </div>
+
       <div class="loc-grid swiper serviceSwiper">
+
         <div class="swiper-wrapper">
+
           <div class="swiper-slide">
+
             <div class="loc-card">
+
               <h4>Punjab</h4>
+
               <p>
-                Same-day site visits &amp; fastest deployment across the
+                Same-day site visits & fastest deployment across the
                 capital region.
               </p>
+
               <span class="badge">Fast Delivery</span>
+
             </div>
+
           </div>
 
           <div class="swiper-slide">
+
             <div class="loc-card">
+
               <h4>Haryana</h4>
+
               <p>
                 Rental support for industrial &amp; agri-processing units in
                 the district.
               </p>
+
               <span class="badge">Active Depot</span>
+
             </div>
+
           </div>
 
           <div class="swiper-slide">
+
             <div class="loc-card">
+
               <h4>Jammu and Kashmir</h4>
+
               <p>
                 DG sets for local commercial &amp; institutional power needs.
               </p>
+
               <span class="badge">Active Depot</span>
+
             </div>
+
           </div>
 
           <div class="swiper-slide">
+
             <div class="loc-card">
+
               <h4>Ladakh</h4>
+
               <p>
                 DG sets for local commercial &amp; institutional power needs.
               </p>
+
               <span class="badge">Active Depot</span>
+
             </div>
+
           </div>
 
           <div class="swiper-slide">
+
             <div class="loc-card">
+
               <h4>Himachal Pradesh</h4>
+
               <p>
                 Reliable DG rental solutions for manufacturing units,
                 commercial spaces, healthcare facilities, and infrastructure
                 projects.
               </p>
+
               <span class="badge">Active Depot</span>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+
     </div>
+
   </section>
 
   <!-- OFFER -->
   <section>
+
     <div class="wrap">
+
       <div class="offer">
+
         <div>
+
           <h3>Free Site Survey & Load Assessment</h3>
+
           <p>
             Not sure which DG capacity is right for your project? Our experts
             will visit your site, assess your power requirements, and
             recommend the ideal Cummins DG set—completely free of charge.
           </p>
+
         </div>
-        <a href="#lead-form" class="btn btn-amber">Book Now</a>
+
+        <a href="#lead-form" class="btn btn-amber">
+          Book Now
+        </a>
+
       </div>
+
     </div>
+
   </section>
 
   <!-- TESTIMONIALS -->
   <section style="background: var(--paper-2)">
+
     <div class="wrap">
+
       <div class="section-head">
+
         <div class="eyebrow">Client Trust</div>
+
         <h2>Trusted by Industry. Recommended by Customers.</h2>
+
       </div>
+
       <div class="test-grid">
+
         <div class="test-card">
+
           <div class="stars">★★★★★</div>
+
           <p class="quote">
-            For our infrastructure project, we needed a heavy-duty generator that could operate continuously under demanding site conditions. The Cummins DG set performed reliably throughout the project. The rental process was smooth, and the service team responded quickly whenever assistance was needed.
+            For our infrastructure project, we needed a heavy-duty generator
+            that could operate continuously under demanding site conditions.
+            The Cummins DG set performed reliably throughout the project. The
+            rental process was smooth, and the service team responded quickly
+            whenever assistance was needed.
           </p>
+
           <div class="who">
-            <!-- <div class="avatar"></div> -->
-            <div><b>Project Director</b></div>
+            <div>
+              <b>Project Director</b>
+            </div>
+
             <span>BuildCore Infrastructure Limited</span>
           </div>
+
         </div>
+
         <div class="test-card">
+
           <div class="stars">★★★★★</div>
+
           <p class="quote">
-          Power interruptions were affecting our production schedule, so we opted for a Cummins DG set on rent. The generator delivered stable power, excellent fuel efficiency and reliable performance. The support team handled installation and maintenance professionally, allowing us to continue operations without disruption.
+            Power interruptions were affecting our production schedule, so we
+            opted for a Cummins DG set on rent. The generator delivered stable
+            power, excellent fuel efficiency and reliable performance. The
+            support team handled installation and maintenance professionally,
+            allowing us to continue operations without disruption.
           </p>
+
           <div class="who">
-            <div><b>Dilmeet Singh</b></div>
-            <div>PrimeTech Manufacturing Pvt. Ltd.</div>
+
+            <div>
+              <b>Dilmeet Singh</b>
+            </div>
+
+            <div>
+              PrimeTech Manufacturing Pvt. Ltd.
+            </div>
+
           </div>
+
         </div>
+
         <div class="test-card">
+
           <div class="stars">★★★★★</div>
+
           <p class="quote">
-           The Cummins DG rental solution provided dependable backup power for our commercial complex. The equipment was well maintained, operated smoothly and was installed without affecting our regular business activities. We are satisfied with the professionalism and prompt service provided by the team.
+            The Cummins DG rental solution provided dependable backup power for
+            our commercial complex. The equipment was well maintained, operated
+            smoothly and was installed without affecting our regular business
+            activities. We are satisfied with the professionalism and prompt
+            service provided by the team.
           </p>
+
           <div class="who">
-            <div><b>Vicky Gupta</b></div>
-            <div>Metro Plaza Commercial Centre</div>
+
+            <div>
+              <b>Vicky Gupta</b>
+            </div>
+
+            <div>
+              Metro Plaza Commercial Centre
+            </div>
+
           </div>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
   <!-- FAQ -->
   <section>
+
     <div class="wrap" style="max-width: 900px">
+
       <div class="section-head center">
-        <div class="eyebrow" style="justify-content: center">Questions</div>
+
+        <div class="eyebrow" style="justify-content: center">
+          Questions
+        </div>
+
         <h2>Frequently Asked Questions</h2>
+
       </div>
+
       <div id="faqList">
+
         <div class="faq-item">
+
           <button class="faq-q">
             What is the minimum rental period for a DG set?
             <span class="plus">+</span>
           </button>
+
           <div class="faq-a">
+
             <p>
               We rent out DG sets for a minimum of 2 months. There is no fixed
               maximum — you can extend the rental for as many days, months, or
               years as your project requires.
             </p>
+
           </div>
+
         </div>
+
         <div class="faq-item">
+
           <button class="faq-q">
             Which kVA range should I choose for my site?
             <span class="plus">+</span>
           </button>
+
           <div class="faq-a">
+
             <p>
               It depends on your connected load. Our engineers offer a free
               site survey and load assessment to recommend the right capacity
               from our 125–320, 365–1010, or 1250–2500 kVA ranges.
             </p>
+
           </div>
+
         </div>
+
         <div class="faq-item">
+
           <button class="faq-q">
             Do you provide installation and operator training?
             <span class="plus">+</span>
           </button>
+
           <div class="faq-a">
+
             <p>
               Yes. Our team handles on-site installation and briefs your staff
               on safe, efficient operation so there's no disruption to your
               daily work.
             </p>
+
           </div>
+
         </div>
+
         <div class="faq-item">
+
           <button class="faq-q">
             What happens if the genset breaks down during the rental period?
             <span class="plus">+</span>
           </button>
+
           <div class="faq-a">
+
             <p>
               Our 24/7 service support team responds to breakdowns quickly,
               and as an authorised Cummins dealer we use only genuine parts
               for any repair carried out on-site.
             </p>
+
           </div>
+
         </div>
+
         <div class="faq-item">
+
           <button class="faq-q">
             Which locations do you currently serve?
             <span class="plus">+</span>
           </button>
+
           <div class="faq-a">
+
             <p>
-              We currently offer DG rental services across Punjab, Haryana, Jammu and Kashmir, Ladakh, and Himachal Pradesh, with local
+              We currently offer DG rental services across Punjab, Haryana,
+              Jammu and Kashmir, Ladakh, and Himachal Pradesh, with local
               depots for faster delivery and service response.
             </p>
+
           </div>
+
         </div>
+
         <div class="faq-item">
+
           <button class="faq-q">
             Can I buy the generator after the rental period ends?
             <span class="plus">+</span>
           </button>
+
           <div class="faq-a">
+
             <p>
               Yes, customers have the option to purchase the rented genset at
               the end of the term, or move to a new unit if your power
               requirement has changed.
             </p>
+
           </div>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
 
   <!-- FINAL CTA -->
   <div class="hazard thin"></div>
+
   <section class="final-cta">
+
     <div class="wrap">
+
       <h2>Looking for a Reliable Rental Power Partner?</h2>
+
       <p>
         Tell us your kVA requirement and site location — our rental team will
         get back to you today with the best pricing, availability, and
         deployment option
       </p>
+
       <div class="cta-row">
-        <a href="#lead-form" class="btn btn-amber">Enquire Now</a>
+
+        <a href="#lead-form" class="btn btn-amber">
+          Enquire Now
+        </a>
+
       </div>
+
     </div>
+
   </section>
 
   <footer>
+
     <div class="wrap">
+
       <div class="foot-grid">
+
         <div>
+
           <div class="brand">
-            <img class="f-logo1" src="./images/pal-logo.png" alt="Cummins High-Power Genset Industrial View" />
-            <img class="cummins-logo3" src="./images/cummins-logo.png" alt="" />
+
+            <img class="f-logo1" src="./images/pal-logo.webp" alt="Cummins High-Power Genset Industrial View" />
+
+            <img class="cummins-logo3" src="./images/cummins-logo.webp" alt="Cummins Logo" />
+
           </div>
 
           <p style="width: 90%">
-            PAL Svam Power Solutions Private Limited — Your Trusted Cummins India Limited
-            Partner for 25+ Years. As an Authorized Cummins Dealer
-            (Distribution Business Unit), we provide end-to-end power
+            PAL Svam Power Solutions Private Limited — Your Trusted Cummins
+            India Limited Partner for 25+ Years. As an Authorized Cummins
+            Dealer (Distribution Business Unit), we provide end-to-end power
             solutions including DG rental, generator sales, AMC support, and
             genuine spare parts — backed by expert service and dependable
             support.
           </p>
+
         </div>
 
         <div>
+
           <h5>Coverage</h5>
+
           <ul>
             <li>Punjab</li>
             <li>Haryana</li>
@@ -762,64 +1172,94 @@
             <li>Ladakh</li>
             <li>Himachal Pradesh</li>
           </ul>
+
         </div>
+
         <div>
+
           <h5>Contact</h5>
+
           <ul>
+
             <li>
               Toll-Free:
-              <a href="tel:01244397000" style="text-decoration: none">01244397000</a>
+              <a href="tel:01244397000" style="text-decoration: none">
+                01244397000
+              </a>
             </li>
-            <li>Lucknow</li>
-          </ul>
-        </div>
-        <div>
-          <h5>Contact</h5>
-          <ul>
+
             <li>
-              Toll-Free:
-              <a href="tel:01244397000" style="text-decoration: none">01244397000</a>
+              spc.haryana@palsvam.com
             </li>
-            <li>spc.haryana@palsvam.com</li>
-            <li>Plot No.78, Phase IV, Udyog Vihar, Gurugram – 122015</li>
+
+            <li>
+              Plot No.78, Phase IV, Udyog Vihar, Gurugram – 122015
+            </li>
+
           </ul>
+
         </div>
+
         <div>
+
           <h5>Rental DG Range</h5>
+
           <ul>
             <li>125 – 320 kVA</li>
             <li>365 – 1010 kVA</li>
             <li>1250 – 2500 kVA</li>
           </ul>
-          <img class="cummins-logo2" src="./images/cummins-logo.png" alt="" />
+
+          <img class="cummins-logo2" src="./images/cummins-logo.webp" alt="Cummins Logo" />
+
         </div>
+
       </div>
+
       <div class="bottom">
-        <span>© PAL Svam Power Solutions Private Limited. All rights reserved.</span>
-        <span>Authorised Dealer - Cummins India Limited.</span>
+
+        <span>
+          © PAL Svam Power Solutions Private Limited. All rights reserved.
+        </span>
+
+        <span>
+          Authorised Dealer - Cummins India Limited.
+        </span>
+
       </div>
+
     </div>
+
   </footer>
 
   <div class="mobile-cta-bar">
-    <a href="#lead-form" class="quote">Book Now</a>
+    <a href="#lead-form2" class="quote">
+      Book Now
+    </a>
   </div>
 
   <script>
+
     // FAQ accordion
     document.querySelectorAll(".faq-item").forEach(function (item) {
+
       var q = item.querySelector(".faq-q");
       var a = item.querySelector(".faq-a");
+
       q.addEventListener("click", function () {
+
         var isOpen = item.classList.contains("open");
+
         document
           .querySelectorAll(".faq-item.open")
           .forEach(function (openItem) {
+
             if (openItem !== item) {
               openItem.classList.remove("open");
               openItem.querySelector(".faq-a").style.maxHeight = null;
             }
           });
+
         if (isOpen) {
           item.classList.remove("open");
           a.style.maxHeight = null;
@@ -830,47 +1270,139 @@
       });
     });
 
-    // Lead form submit (no backend — demo confirmation)
+
+    // Lead form submit
     var form = document.getElementById("dgLeadForm");
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      form.style.display = "none";
-      document.getElementById("formSuccess").style.display = "block";
-    });
 
     const swiper = new Swiper(".serviceSwiper", {
       loop: true,
-
       speed: 900,
-
       spaceBetween: 30,
-
       autoplay: {
         delay: 3500,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       },
-
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-
       breakpoints: {
         0: {
           slidesPerView: 1,
         },
-
         768: {
           slidesPerView: 2,
         },
-
         1200: {
           slidesPerView: 3,
         },
       },
     });
+
+    const citySelect = document.getElementById("fcity");
+    const otherCity = document.getElementById("otherCity");
+
+    citySelect.addEventListener("change", function () {
+
+      if (this.value === "Other") {
+        citySelect.style.display = "none";
+        otherCity.style.display = "block";
+        otherCity.required = true;
+      } else {
+        otherCity.style.display = "none";
+        otherCity.required = false;
+        otherCity.value = "";
+      }
+    });
+
+
+    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzs5w9VHeOAcA5DRwQnprWBj02XOi1-xi51-xzfvt3Kr8IXOahHAn0gDoWlOIjlGK2_tQ/exec";
+
+    form.addEventListener("submit", function (e) {
+
+      e.preventDefault();
+      let city = document.getElementById("fcity").value;
+      if (city === "Other") {
+        city = document.getElementById("otherCity").value.trim();
+      }
+
+      const phone = document.getElementById("fphone").value.trim();
+      const email = document.getElementById("femail").value.trim().toLowerCase();
+
+      // Information message
+      const formMessage = document.getElementById("formMessage");
+      // Stored records
+      let submittedRecords = JSON.parse(localStorage.getItem("submittedRecords")) || [];
+
+
+      // Check duplicate by phone OR email
+      const alreadySubmitted = submittedRecords.some(item =>
+        item.phone === phone || item.email === email
+      );
+
+
+      if (alreadySubmitted) {
+        formMessage.textContent = "✓ Information Already Captured";
+        formMessage.style.display = "block";
+        formMessage.style.color = "#d9534f";
+        return;
+      }
+      else {
+        formMessage.textContent = "✓ Information Capture Successfully";
+        formMessage.style.display = "block";
+        formMessage.style.color = "#198754";
+        // form.reset();
+        document.getElementById("otherCity").style.display = "none";
+        citySelect.style.display = "block";
+      }
+
+      const data = {
+        formType: "pal-svam-16-july",
+        name: document.getElementById("fname").value.trim(),
+        phone: phone,
+        email: email,
+        company: document.getElementById("cname").value.trim(),
+        kva: document.getElementById("fkva").value,
+        city: city
+      };
+
+      submittedRecords.push({
+        phone: phone,
+        email: email
+      });
+
+      localStorage.setItem(
+        "submittedRecords",
+        JSON.stringify(submittedRecords)
+      );
+
+      fetch(WEB_APP_URL, {
+        method: "POST",
+        body: JSON.stringify(data)
+      })
+        .then(res => res.json())
+        .then(response => {
+          if (response.status === "success") {
+            // formMessage.textContent = "✓ Information Capture Successfully";
+            // formMessage.style.display = "block";
+            // formMessage.style.color = "#198754";
+            form.reset();
+            // document.getElementById("otherCity").style.display = "none";
+            // citySelect.style.display = "block";
+          }
+        })
+        .catch(err => {
+          console.log(err);
+          formMessage.textContent
+          "Something went wrong. Please try again.";
+          formMessage.style.display = "block";
+          formMessage.style.color = "#d9534f";
+        });
+    });
+
   </script>
+
 </body>
 
 </html>

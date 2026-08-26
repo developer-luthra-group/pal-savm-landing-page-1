@@ -266,14 +266,6 @@ header .wrap {
     content: "";
     position: absolute;
     inset: 0;
-    /* background:
-    linear-gradient(
-      120deg,
-      rgba(8, 40, 38, 0.94) 0%,
-      rgba(8, 40, 38, 0.82) 42%,
-      rgba(8, 40, 38, 0.55) 100%
-    ),
-    url("assets/genset-hero.jpg") right center / cover no-repeat; */
     background-size: 52px 52px;
     mask-image: linear-gradient(to bottom, #000 20%, transparent 90%);
     opacity: 0.55;
@@ -570,23 +562,63 @@ header .wrap {
     }
 }
 
-.form-success {
+
+.success-overlay {
+    position: fixed;
+    inset: 0;
     display: none;
-    text-align: center;
-    padding: 20px 6px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 99999;
 }
 
-.form-success .tick {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    background: var(--teal-brand);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 14px;
-    font-size: 26px;
+.success-popup {
+    width: 90%;
+    max-width: 420px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 35px 30px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,.25);
+    animation: popupScale .25s ease;
+}
+
+.success-popup h4{
+    margin-top:15px;
+    font-size:24px;
+}
+
+.success-popup p{
+    margin:15px 0 25px;
+    color:#666;
+    line-height:1.6;
+}
+
+.success-popup .tick{
+    width:70px;
+    height:70px;
+    margin:auto;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#0b8f87;
+    color:#fff;
+    font-size:34px;
+}
+
+@keyframes popupScale{
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
 }
 
 /* ---------- Generic section ---------- */
@@ -1052,7 +1084,7 @@ section {
     position: relative;
     overflow: hidden;
 }
-
+/* 
 .offer::after {
     content: "";
     position: absolute;
@@ -1064,7 +1096,7 @@ section {
     background: radial-gradient(circle,
             rgba(31, 214, 198, 0.25),
             transparent 70%);
-}
+} */
 
 .offer h3 {
     color: #fff;
@@ -1230,11 +1262,7 @@ section {
     margin-top: 25px;
 }
 
-/* .final-cta .cta-row a {
-    flex: 1;
-    text-align: center;
-    max-width: 300px;
-} */
+
 /* ---------- Footer ---------- */
 footer {
     background: var(--white);
@@ -1353,22 +1381,7 @@ footer .bottom {
 }
 
 /* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        transition: none !important;
-    }
-}
 
-:focus-visible {
-    outline: 3px solid var(--amber);
-    outline-offset: 2px;
-}
-
-@media (max-width: 700px) {
-    div.wrap .header-cta a {
-        display: none;
-    }
-}
 
 .ps-grid {
     display: grid;
@@ -1412,9 +1425,6 @@ footer .bottom {
     font-weight: bold;
 }
 
-/* ===============================
-   PROBLEM / SOLUTION COMPARISON
-================================= */
 
 .compare-table {
     display: grid;
@@ -1465,22 +1475,6 @@ footer .bottom {
     background: #eef9f8;
 }
 
-/* Icons */
-
-/* .cell.problem::before{
-    content:"❗";
-    position:absolute;
-    left:40px;
-    top:26px;
-    width:24px;
-    height:24px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:18px;
-    color:#D97706;
-} */
-
 .cell.solution::before {
     content: "✔";
     position: absolute;
@@ -1522,7 +1516,11 @@ footer .bottom {
 .cell:hover {
     background: #ffffff;
 }
-
+.inside-pb{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
 /* Responsive */
 
 @media (max-width: 991px) {
@@ -1543,8 +1541,19 @@ footer .bottom {
     }
 }
 
-.inside-pb{
-    display: flex;
-    align-items: center;
-    gap: 6px;
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
+
+:focus-visible {
+    outline: 3px solid var(--amber);
+    outline-offset: 2px;
+}
+
+@media (max-width: 700px) {
+    div.wrap .header-cta a {
+        display: none;
+    }
 }
