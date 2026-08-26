@@ -1346,6 +1346,9 @@
         formMessage.textContent = "✓ Information Already Captured";
         formMessage.style.display = "block";
         formMessage.style.color = "#d9534f";
+        setTimeout(function () {
+          formMessage.style.display = "none";
+        }, 5000);
         return;
       }
       else {
@@ -1355,6 +1358,9 @@
         // form.reset();
         document.getElementById("otherCity").style.display = "none";
         citySelect.style.display = "block";
+        setTimeout(function () {
+          formMessage.style.display = "none";
+        }, 5000);
       }
 
       const data = {
